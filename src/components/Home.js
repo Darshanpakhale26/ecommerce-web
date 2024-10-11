@@ -1,4 +1,6 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 // Function to display star ratings based on the product rating value
 const Rating = ({ value }) => {
@@ -16,6 +18,7 @@ const Rating = ({ value }) => {
 };
 
 const Home = ({ products, addToCart, buyNow }) => {
+  const navigate = useNavigate();
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl md:text-3xl font-bold mb-4">Products</h1>
@@ -45,7 +48,7 @@ const Home = ({ products, addToCart, buyNow }) => {
               </button>
               <button
                 className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
-                // onClick={() => buyNow(product)}
+                onClick={() => buyNow(product, navigate)}
               >
                 Buy Now
               </button>

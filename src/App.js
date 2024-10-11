@@ -1,10 +1,13 @@
-// src/App.js
+
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar";
 // import Product from './components/Product';
 import CartPage from "./components/CartPage"; // New CartPage component
 import Home from "./components/Home"; // Home component for products
+import PaymentPage from "./components/PaymentPage";
+import PaySuccess from "./components/PaySuccess";
+import Login from "./components/Login";
 // import images
 import earphone1 from "./images/earphone1.webp";
 import earphone2 from "./images/earphone2.webp";
@@ -27,6 +30,7 @@ function App() {
     { id: 6, name: "BassBuds Duo", price: 1200, image: watch3 },
     { id: 7, name: "BassBuds Pro", price: 1800, image: watch4 },
     { id: 8, name: "BassBuds Sport", price: 1300, image: watch5 },
+    { id: 9, name: "BassBuds Urban", price: 1500, image: watch1 },
   ];
 
   const addToCart = (product) => {
@@ -56,15 +60,24 @@ function App() {
     setCartItems(cartItems.filter((item) => item.id !== productId));
   };
 
+  const buyNow = (product, navigate) => {
+    navigate('/payment', { state: { product } });
+  };
+
+  
+  
+
   return (
     <Router>
       <div className="App">
         <NavBar cartItems={cartItems} />
 
+
+
         <Routes>
           <Route
             path="/"
-            element={<Home products={products} addToCart={addToCart} />}
+            element={<Home products={products} addToCart={addToCart} buyNow={buyNow} />}
           />
           <Route
             path="/cart"
@@ -76,6 +89,12 @@ function App() {
               />
             }
           />
+          {/* Payment Page Route */}
+          <Route path="/payment" element={<PaymentPage/>} />
+          {/* Success Page Route */}
+          <Route path="/success" element={<PaySuccess />} />
+          {/* Login Page Route */}
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </Router>

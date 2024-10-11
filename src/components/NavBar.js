@@ -2,8 +2,16 @@
 import React from 'react';
 import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function NavBar({ cartItems }) {
+  const navigate = useNavigate();
+  const HandleLogin = (e) => {
+    
+    navigate('/login'); // Redirect to home page after login 
+   
+  }
+
   return (
     <nav className="bg-gray-800 text-white p-4 flex justify-between items-center">
       {/* Logo */}
@@ -23,7 +31,7 @@ function NavBar({ cartItems }) {
       {/* Right Section - Login and Cart */}
       <div className="flex items-center space-x-6">
         {/* Login Button */}
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button onClick={HandleLogin} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
           Login
         </button>
 

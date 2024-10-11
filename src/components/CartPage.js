@@ -58,6 +58,16 @@ function CartPage({ cartItems, updateCartItem, removeCartItem }) {
           <div className="text-right mt-4 font-bold text-xl">
             Total: ₹{total}
           </div>
+
+          {/* Checkout Button */}
+          <div className="text-right mt-4">
+            <button onclick className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+              Checkout to Proceed
+            </button>
+          </div>
+
+        
+          
         </>
       )}
     </div>
