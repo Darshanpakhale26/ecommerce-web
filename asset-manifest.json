@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ecommerce-web/static/css/main.0e03dde4.css",
-    "main.js": "/ecommerce-web/static/js/main.05a875b2.js",
+    "main.css": "/ecommerce-web/static/css/main.ca409ff4.css",
+    "main.js": "/ecommerce-web/static/js/main.ed53777a.js",
     "static/js/453.ce58f9bb.chunk.js": "/ecommerce-web/static/js/453.ce58f9bb.chunk.js",
     "static/media/earphone3.webp": "/ecommerce-web/static/media/earphone3.62efcf5c2f0a5c1709b5.webp",
     "static/media/watch3.webp": "/ecommerce-web/static/media/watch3.089b49cff7d3acf7c870.webp",
@@ -12,12 +12,12 @@
     "static/media/watch2.webp": "/ecommerce-web/static/media/watch2.7dfa7fa6cc7fb6092514.webp",
     "static/media/earphone1.webp": "/ecommerce-web/static/media/earphone1.cce7cff48599e1f831a3.webp",
     "index.html": "/ecommerce-web/index.html",
-    "main.0e03dde4.css.map": "/ecommerce-web/static/css/main.0e03dde4.css.map",
-    "main.05a875b2.js.map": "/ecommerce-web/static/js/main.05a875b2.js.map",
+    "main.ca409ff4.css.map": "/ecommerce-web/static/css/main.ca409ff4.css.map",
+    "main.ed53777a.js.map": "/ecommerce-web/static/js/main.ed53777a.js.map",
     "453.ce58f9bb.chunk.js.map": "/ecommerce-web/static/js/453.ce58f9bb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e03dde4.css",
-    "static/js/main.05a875b2.js"
+    "static/css/main.ca409ff4.css",
+    "static/js/main.ed53777a.js"
   ]
 }
