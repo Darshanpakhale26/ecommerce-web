@@ -5,7 +5,7 @@ const PaySuccess = () => {
 
     const navigate = useNavigate();
     const handleContinueShopping = () => {
-        navigate('/');
+        navigate('/ecommerce-web');
     }
 
 
