@@ -1,6 +1,7 @@
 // src/components/CartPage.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function CartPage({ cartItems, updateCartItem, removeCartItem }) {
   const handleQuantityChange = (productId, newQuantity) => {
@@ -8,6 +9,15 @@ function CartPage({ cartItems, updateCartItem, removeCartItem }) {
       updateCartItem(productId, newQuantity);
     }
   };
+
+  const navigate = useNavigate();
+  const CheckoutHandler = () => {
+   navigate("/success");
+    alert("Are you sure you want to proceed to checkout?");
+  };
+
+
+
 
   const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
@@ -19,7 +29,7 @@ function CartPage({ cartItems, updateCartItem, removeCartItem }) {
       {cartItems.length === 0 ? (
         <div className="text-center mt-8">
           <p className="text-xl mb-4">Your cart is empty.</p>
-          <Link to="/">
+          <Link to="/ecommerce-web">
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               Go to Shopping
             </button>
@@ -61,7 +71,7 @@ function CartPage({ cartItems, updateCartItem, removeCartItem }) {
 
           {/* Checkout Button */}
           <div className="text-right mt-4">
-            <button onclick className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+            <button onClick={CheckoutHandler} className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
               Checkout to Proceed
             </button>
           </div>

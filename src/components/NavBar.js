@@ -16,7 +16,7 @@ function NavBar({ cartItems }) {
     <nav className="bg-gray-800 text-white p-4 flex justify-between items-center">
       {/* Logo */}
       <div className="text-2xl font-bold">
-        <Link to="/">Darshan</Link>
+        <Link to="/ecommerce-web">Darshan</Link>
       </div>
 
       {/* Search Bar */}

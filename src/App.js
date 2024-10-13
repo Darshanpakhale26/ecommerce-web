@@ -76,7 +76,7 @@ function App() {
 
         <Routes>
           <Route
-            path="/"
+            path="/ecommerce-web"
             element={<Home products={products} addToCart={addToCart} buyNow={buyNow} />}
           />
           <Route
